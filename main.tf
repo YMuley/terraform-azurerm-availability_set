@@ -7,6 +7,6 @@ resource "azurerm_availability_set" "availability_set" {
   platform_fault_domain_count  = each.value.platform_fault_domain_count
   platform_update_domain_count = each.value.platform_update_domain_count
   managed                      = each.value.managed
-  proximity_placement_group_id = var.proximity_placement_group_output[each.value.proximity_placement_group_name].id
+  //proximity_placement_group_id = var.proximity_placement_group_output[each.value.proximity_placement_group_name].id
   tags                         = each.value.tags == null ? var.default_values.tags : each.value.tags
 }
